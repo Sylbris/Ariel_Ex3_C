@@ -18,15 +18,15 @@ if that word is in the text or a similar word to it.
 
 Copy the repository, run makefile with following commands:
 
-'''bash
+```bash
 make mains
-'''
+```
 
 To the run the program use : 
 
-'''bash
+```bash
 ./mains
-'''
+```
 
 ## Files
 

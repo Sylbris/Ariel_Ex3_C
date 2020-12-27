@@ -8,6 +8,8 @@ The project is divided into 2 parts :
 
 1. Implementing insertion sort in C without the use of [] ,
 
+![alt text](https://memegenerator.net/img/instances/53356670.jpg)
+
 2. Writing a programm that recieves word and text as input and returns 
 
 if that word is in the text or a similar word to it.

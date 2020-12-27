@@ -1,6 +1,12 @@
 #include<stdio.h>
 #include"isort.h"
 
+/*
+// Program recieves input of array and number of elements to shift.
+// shift all elements all given elements by 1 using pointers.
+// 
+//
+*/
 void shift_element(int* arr, int i){
 
 int *pointer=(arr+i);

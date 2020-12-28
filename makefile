@@ -10,6 +10,9 @@ libmysort.a: isort.o
 isort.o: isort.c isort.h
 	$(CC) $(CFLAGS) -c isort.c
 
+txtfind.o: txtfind.c isort.h
+	$(CC) $(CFLAGS) -c txtfind.c
+
 main.o: main.c isort.h
 	$(CC) $(CFLAGS) -c main.c
 	

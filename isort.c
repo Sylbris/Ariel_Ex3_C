@@ -38,7 +38,7 @@ pointer_i=(arr+i);
 pointer_j=(arr+j);
 counter=0;
 if(*pointer_j>*pointer_i){ //if we encounter an elemenet not in place begin insertion sort.
-while(j>=0 && *pointer_j>*pointer_i){
+while(j>0 && *pointer_j>*pointer_i){
 
 counter++;
 j--;

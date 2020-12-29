@@ -27,27 +27,37 @@ int getlines(char s[]){
 int getword(char w[]){
 	char c;
 	int counter=0;
-	while((c=getchar())!='\0' && c!=' ' && c!='\t' && c!=EOF){
+	while(((c=getchar())!='\0' && c!=' ' && c!='\t' && c!='\n' && c!='\r')&& c!=EOF){
 		w[counter]=c;
 		counter++;
-	}
+}
 	w[counter]=0;
-	return counter;
+	if(c==EOF){
+		return counter;
+		}
+	else {
+		return counter+1;
+		}
 }
 //check if str2 has str1
 int substring(char *str1, char *str2){
+	
 	if(strlen(str1)>strlen(str2)){
+	
 		return 0;
 	}
-	if(strstr(str1,str2)!=NULL){ return 1; }
+	
+	if(strstr(str2,str1)!=NULL){ return 1; }
 	else {
 		return 0;
 	}
 }
+
 int similar(char *s,char *t, int n)
 {
 	int i = 0;
-	if (strlen(s) == strlen(t) || strlen(s) +1 == strlen(t))
+
+	if (strlen(s)== strlen(t)|| strlen(s) +1 == strlen(t))
 		{
 		for (int j = 0; j < strlen(t); j++)
 			{
@@ -61,15 +71,14 @@ int similar(char *s,char *t, int n)
 	}
 	return 0;
 	}
-/*
-//
-//
-*/
+	
+
+
 void print_lines(char *str){
 	char lines[line];
 	while(getlines(lines)){
 			if(substring(str, lines)==1){
-				printf("%s" , lines);
+				printf("%s\n" , lines);
 				}
 			}
 		}
@@ -79,7 +88,7 @@ void print_similar_words(char *str){
 	char words[WORD];
 	while(getword(words)){
 		if (similar(str, words, 0)==1 || similar(str, words, 1)==1){
-			printf("%s" , words);
+			printf("%s\n" , words);
 		}
 	}
 }
@@ -90,6 +99,7 @@ scanf(" %s", words);
 //printf("%s", words);
 char ch;
 scanf(" %c", &ch);
+
 if(ch=='a'){
 print_lines(words);
 }

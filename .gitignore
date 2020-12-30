@@ -1,3 +1,5 @@
 txtfind.c
 main.o
 *.o
+txtfind
+*.a

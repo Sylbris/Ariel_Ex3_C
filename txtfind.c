@@ -17,7 +17,12 @@ int getlines(char s[]){
 		counter++;
 	}
 	s[counter]=0;
-	return counter;
+		if(c==EOF){
+		return counter;
+		}
+	else {
+		return counter+1;
+		}
 }
 /*
 // Takes stdio and converts into words.

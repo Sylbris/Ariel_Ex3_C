@@ -19,13 +19,20 @@ if that word is in the text or a similar word to it.
 Copy the repository, run makefile with following commands:
 
 ```bash
-make mains
+make all
 ```
 
 To the run the program use : 
 
 ```bash
-./mains
+./txtfind < example_text_file.txt
+```
+```bash
+./isort < example_array_file.txt
+```
+
+```bash
+make clean
 ```
 
 ## Files
